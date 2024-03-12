@@ -1,13 +1,13 @@
 ---
 name: Generic User Story
-about: Generic User Story with Acceptance Criteria
+about: Generic User Story with Acceptance Criteria for Site User
 title: ''
 labels: ''
 assignees: ''
 
 ---
 
-As a **role** I can **capability** so that **received benefit**
+As a **Site User** I can **capability** so that **received benefit**
 
 ### Acceptance Criteria
 
