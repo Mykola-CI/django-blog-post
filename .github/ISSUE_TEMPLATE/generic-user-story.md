@@ -11,8 +11,8 @@ As a **Site User** I can **capability** so that **received benefit**
 
 ### Acceptance Criteria
 
-- Acceptance criteria 1
+- AC 1
 
-- Acceptance criteria 2
+- AC 2
 
-- Acceptance criteria 3
+- AC 3
