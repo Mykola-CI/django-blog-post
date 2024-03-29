@@ -18,7 +18,11 @@
                     </p>
                 </div>
                 <div class="d-none d-md-block col-md-6 masthead-image">
-                    {% if "placeholder" in post.featured_image.url %}
+                    {% if post.external_image_url %}
+                        <img src="{{ post.external_image_url }}"
+                             class="scale"
+                             alt="{{ post.title }}">
+                    {% elif "placeholder" in post.featured_image.url %}
                         <img src="{% static 'images/default.jpg' %}"
                              class="scale"
                              alt="placeholder image">

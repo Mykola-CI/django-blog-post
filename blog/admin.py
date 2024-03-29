@@ -1,10 +1,18 @@
+from django import forms
 from django.contrib import admin
 from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
+    
+class PostAdminForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = '__all__'
+
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 
+    form = PostAdminForm
     list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ['title', 'content']
     list_filter = ('status', 'created_on',)
@@ -13,7 +21,8 @@ class PostAdmin(SummernoteModelAdmin):
 
 # Register your models here.
 # admin.site.register(Comment)
-    
+
+
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('post_title', 'author', 'body', 'approved', 'created_on')

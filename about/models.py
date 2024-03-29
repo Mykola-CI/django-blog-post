@@ -4,6 +4,9 @@ from cloudinary.models import CloudinaryField
 # Create your models here.
 class About(models.Model):
     title = models.CharField(max_length=200, unique=True)
+    external_image_url = models.URLField(
+        max_length=500, blank=True, null=True
+    )
     profile_image = CloudinaryField('image', default='placeholder')
     content = models.TextField()
     updated_on = models.DateTimeField(auto_now=True)
